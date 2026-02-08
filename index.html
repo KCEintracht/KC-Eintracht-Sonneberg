@@ -16,7 +16,6 @@
 
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #333; background-color: var(--light-bg); line-height: 1.6; scroll-behavior: smooth; }
         
-        /* Navigation & Header */
         header { 
             background: var(--logo-yellow); 
             padding: 10px 5%; 
@@ -34,7 +33,6 @@
         nav a { text-decoration: none; color: var(--logo-black); font-weight: bold; transition: 0.3s; }
         nav a:hover { color: var(--primary-color); }
 
-        /* Burger Button */
         .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
         .menu-toggle span { width: 25px; height: 3px; background: var(--logo-black); border-radius: 2px; }
 
@@ -48,10 +46,8 @@
             }
             nav ul.active { display: flex; }
             nav li { margin: 10px 0; text-align: center; }
-            iframe { width: 100% !important; height: 400px !important; } /* Kalender mobil anpassen */
         }
 
-        /* Hero & Content */
         .hero { 
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('IMG-20250519-WA0008.jpg'); 
             background-size: cover; background-position: center; height: 40vh;
@@ -66,7 +62,7 @@
         .image-gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
         .training-banner { background: var(--primary-color); color: white; padding: 40px; border-radius: 15px; text-align: center; margin: 40px 0; }
-        .cta-btn { background: var(--secondary-color); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; transition: 0.3s; border: none; }
+        .cta-btn { background: var(--secondary-color); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; }
 
         footer { background: var(--dark-bg); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
         footer a { color: var(--logo-yellow); text-decoration: none; }
@@ -76,8 +72,8 @@
 
 <header>
     <div class="logo-area">
-        <img src="logo-kc-eintracht.png" alt="KC Eintracht Sonneberg Logo">
-        <h1 style="margin:0; font-size: 1.2rem;">KC Eintracht Sonneberg e.V.</h1>
+        <img src="logo-kc-eintracht.png" alt="KC Eintracht Logo">
+        <h1 style="margin:0; font-size: 1.2rem;">KC Eintracht Sonneberg</h1>
     </div>
     <div class="menu-toggle" id="mobile-menu">
         <span></span><span></span><span></span>
@@ -99,13 +95,13 @@
 
 <div class="container">
     <div class="image-gallery">
-        <img src="IMG-20250519-WA0008.jpg" alt="Blick auf die Kegelbahn Erholung">
-        <img src="IMG-20250519-WA0009.jpg" alt="Gesamtansicht der Kegelbahn">
+        <img src="IMG-20250519-WA0008.jpg" alt="Innenansicht Kegelbahn">
+        <img src="IMG-20250519-WA0009.jpg" alt="Gesamtansicht Kegelbahn">
     </div>
 
-    <section id="termine">
+    <section id="termine" style="margin-top: 40px;">
         <h3>📅 Nächste Wettkämpfe</h3>
-        <iframe src="https://calendar.google.com/calendar/embed?src=4f95d2b925d62ce75674ee21586778054091f75550b834c4d908700afd6db7b2%40group.calendar.google.com&ctz=Europe%2FBerlin&mode=AGENDA" style="border: 0; width: 100%;" height="500" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=4f95d2b925d62ce75674ee21586778054091f75550b834c4d908700afd6db7b2%40group.calendar.google.com&ctz=Europe%2FBerlin&mode=AGENDA&showTitle=0&showNav=0&showPrint=0&showTabs=0&showCalendars=0" style="border: 0; width: 100%;" height="500" frameborder="0" scrolling="no"></iframe>
     </section>
 
     <div class="training-banner" id="training">
@@ -118,18 +114,17 @@
         <div class="card" id="anfahrt">
             <h3>📍 Anfahrt</h3>
             <p><strong>Kegelbahn Erholung</strong><br>Erholungsstraße 22, 96515 Sonneberg</p>
-            <a href="https://maps.google.com/?q=Erholungsstraße+22,96515+Sonneberg" target="_blank" class="cta-btn" style="background: #4285F4; font-size: 0.9rem;">Route öffnen</a>
+            <a href="https://maps.google.com/?q=Erholungsstraße+22,96515+Sonneberg" target="_blank" class="cta-btn" style="background: #4285F4;">Route planen</a>
         </div>
         <div class="card">
             <h3>📞 Kontakt</h3>
-            <p>Fragen zum Verein oder zur Bahnbuchung?<br>Tel: +49 3675 4204255</p>
+            <p>Tel: +49 3675 4204255</p>
         </div>
     </div>
 </div>
 
 <footer>
-    <p><strong>KC Eintracht Sonneberg e.V.</strong></p>
-    <p>© 2026 | <a href="impressum.html">Impressum & Datenschutz</a></p>
+    <p>© 2026 KC Eintracht Sonneberg | <a href="impressum.html">Impressum & Datenschutz</a></p>
 </footer>
 
 <script>
@@ -140,7 +135,6 @@
         navList.classList.toggle('active');
     });
 
-    // Schließt Menü bei Klick auf Link
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', () => {
             navList.classList.remove('active');
