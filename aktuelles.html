@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktuelles - KC Eintracht Sonneberg</title>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #ff9800;
+            --light-bg: #f9f9f9;
+        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--light-bg); line-height: 1.6; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h1 { color: var(--primary-color); border-bottom: 2px solid #FFD700; }
+        .bericht-card { 
+            display: flex; align-items: center; gap: 15px; background: #f4f4f4; 
+            padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid var(--secondary-color);
+        }
+        .cta-btn { 
+            background: var(--primary-color); color: white; padding: 10px 20px; 
+            text-decoration: none; border-radius: 5px; font-weight: bold; margin-left: auto;
+        }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary-color); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    <h1>📰 Aktuelles & Spielberichte</h1>
+    <p>Hier findet ihr alle Berichte der aktuellen Saison als PDF-Download.</p>
+
+    <div class="bericht-card">
+        <span style="font-size: 2rem;">📄</span>
+        <div>
+            <strong>Spielbericht: KC Eintracht vs. Gastmannschaft</strong><br>
+            <small>Datum: 22.02.2026</small>
+        </div>
+        <a href="spielbericht-22-02.pdf" target="_blank" class="cta-btn">PDF öffnen</a>
+    </div>
+
+    </div>
+
+</body>
+</html>
