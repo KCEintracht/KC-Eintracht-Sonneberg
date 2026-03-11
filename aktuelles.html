@@ -22,6 +22,7 @@
             text-decoration: none; border-radius: 5px; font-weight: bold; margin-left: auto;
         }
         .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary-color); font-weight: bold; }
+        iframe { border: none; border-radius: 8px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -36,10 +37,12 @@
         <div>
             <strong>Spielberichte und Aktuelles vom KC Eintracht</strong><br>
         </div>
-        <a href="Spielbericht.pdf" target="_blank" class="cta-btn">PDF öffnen</a>
+        <a href="Spielberichte.pdf" download class="cta-btn">PDF herunterladen</a>
     </div>
 
-    </div>
+    <iframe src="Spielberichte.pdf" width="100%" height="600px"></iframe>
+
+</div>
 
 </body>
 </html>
