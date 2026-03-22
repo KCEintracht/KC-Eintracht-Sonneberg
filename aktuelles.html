@@ -11,18 +11,31 @@
             --light-bg: #f9f9f9;
         }
         body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--light-bg); line-height: 1.6; padding: 20px; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         h1 { color: var(--primary-color); border-bottom: 2px solid #FFD700; }
+        
+        /* Styling für das PDF-Fenster */
+        .pdf-container {
+            width: 100%;
+            height: 600px; /* Höhe des Berichtsfensters */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
         .bericht-card { 
             display: flex; align-items: center; gap: 15px; background: #f4f4f4; 
-            padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid var(--secondary-color);
+            padding: 15px; border-radius: 8px; margin-bottom: 10px; border-left: 5px solid var(--secondary-color);
         }
         .cta-btn { 
-            background: var(--primary-color); color: white; padding: 10px 20px; 
-            text-decoration: none; border-radius: 5px; font-weight: bold; margin-left: auto;
+            background: var(--primary-color); color: white; padding: 8px 15px; 
+            text-decoration: none; border-radius: 5px; font-weight: bold; margin-left: auto; font-size: 0.9rem;
         }
         .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary-color); font-weight: bold; }
-        iframe { border: none; border-radius: 8px; margin-top: 20px; }
+        
+        @media (max-width: 600px) {
+            .pdf-container { height: 400px; } /* Etwas kleiner auf dem Handy */
+        }
     </style>
 </head>
 <body>
@@ -30,17 +43,28 @@
 <div class="container">
     <a href="index.html" class="back-link">← Zurück zur Startseite</a>
     <h1>📰 Aktuelles & Spielberichte</h1>
-    <p>Hier findet ihr alle Berichte der aktuellen Saison als PDF-Download.</p>
+    
+    <h2>Neuester Spielbericht</h2>
+    <p>Hier könnt ihr den aktuellen Bericht direkt lesen:</p>
+
+    <iframe src="spielbericht-22-02.pdf" class="pdf-container">
+        Ihr Browser kann PDFs nicht direkt anzeigen. 
+        <a href="spielbericht-22-02.pdf">Hier klicken, um die Datei zu öffnen.</a>
+    </iframe>
+
+    <hr>
+
+    <h3>Archiv / Ältere Berichte</h3>
+    <p>Frühere Ergebnisse zum Nachlesen:</p>
 
     <div class="bericht-card">
-        <span style="font-size: 2rem;">📄</span>
+        <span style="font-size: 1.5rem;">📄</span>
         <div>
-            <strong>Spielberichte und Aktuelles vom KC Eintracht</strong><br>
+            <strong>Spielbericht: KC Eintracht vs. Gast</strong><br>
+            <small>Datum: 22.02.2026</small>
         </div>
-        <a href="Spielberichte.pdf" download class="cta-btn">PDF herunterladen</a>
+        <a href="spielbericht-22-02.pdf" target="_blank" class="cta-btn">In neuem Tab öffnen</a>
     </div>
-
-    <iframe src="Spielbericht.pdf" width="100%" height="600px"></iframe>
 
 </div>
 
